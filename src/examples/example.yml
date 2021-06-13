@@ -1,12 +1,16 @@
-version: 2.1
-orbs:
-  ecschedule: sogaoh/orb-ecschedule@x.y.z
+description: >
+  sogaoh/orb-ecschedule usage example
+
+usage:
+  version: 2.1
+  orbs:
+    ecschedule: sogaoh/orb-ecschedule@x.y.z
   jobs:
-    ecspresso_example: null
-    steps:
-      - checkout
-      - ecschedule/install
-      - run:
-          command: |
-            cd /path/to/ecschedule_yaml_dir
-            ecschedule -conf ecschedule.yaml apply -all -dry-run
+    ecschedule_dry_run:
+      steps:
+        - checkout
+        - ecschedule/install
+        - run:
+            command: |
+              cd /path/to/ecschedule_yaml_dir
+              ecschedule -conf ecschedule.yaml apply -all -dry-run
