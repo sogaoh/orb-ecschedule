@@ -1,0 +1,8 @@
+version: 2.1
+
+description: >
+  Orb for [ecschedule](https://github.com/Songmu/ecschedule) uses in CircleCI.
+
+display:
+  home_url: https://circleci.com/developer/orbs/orb/sogaoh/orb-ecschedule
+  source_url: https://github.com/sogaoh/orb-ecschedule
