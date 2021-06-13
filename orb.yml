@@ -20,3 +20,19 @@ commands:
             go get github.com/Songmu/ecschedule/cmd/ecschedule
             sudo install ~/go/bin/ecschedule /usr/local/bin/ecschedule
             ecschedule --version
+
+examples:
+  apply_all_dry_run:
+    description: ecschedule apply -all -dry-run 
+    usage:
+      version: 2.1
+      #orbs:
+      #  ecschedule: sogaoh/orb-ecschedule@x.y.z
+      ecschedule_example: null
+      steps:
+        - checkout
+        - ecschedule/install
+        - run:
+            command: |
+              cd /path/to/ecschedule_yaml_dir
+              ecschedule -conf ecschedule.yaml apply -all -dry-run
