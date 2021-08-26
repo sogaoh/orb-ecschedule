@@ -1,0 +1,23 @@
+version: 2.1
+orbs:
+  ecschedule: sogaoh/orb-ecschedule@0.0.8
+
+jobs:
+  build:
+    docker:
+    - image: amazonlinux:2
+    steps:
+    - run:
+        name: Install Tools
+        command: |
+          yum install -y git wget tar sudo
+    - ecschedule/install
+    - run:
+        name: Show ecschedule Version
+        command: |
+          ecschedule --version
+
+workflows:
+  main:
+    jobs:
+    - build
