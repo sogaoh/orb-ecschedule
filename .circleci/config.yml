@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  ecschedule: sogaoh/orb-ecschedule@0.0.8
+  ecschedule: sogaoh/orb-ecschedule@0.1.0
 
 jobs:
   build:
